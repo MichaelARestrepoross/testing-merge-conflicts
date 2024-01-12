@@ -11,10 +11,12 @@ function createPerson(name, age) {
     return personOne;
   }
 
-  function fn(...c) {
-    if (!c.every((a) => Number.isNumber(a)))
-      throw "All arguments must be numbers.";
-    return c.reduce((a, b) => a + b);
+  function fn(...numbers) {
+    if (!numbers.every((num) => typeof num === 'number')) {
+      console.error("All arguments must be numbers.");
+    }
+
+    return numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
   }
   
   fn(1, 2, 3); //> 6
