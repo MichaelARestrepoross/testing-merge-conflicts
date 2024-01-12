@@ -11,11 +11,11 @@ function createPerson(name, age) {
     return personOne;
   }
 
-  function fn(...array) {
-    if (!array.every((input) => Number.isNumber(input)))
-      throw "All arguments must be numbers..";
-    return array.reduce((a, b) => a + b);
+  function sum(...nums) {
+    if (!nums.every((num) => Number.isInteger(num)))
+      throw "All arguments must be numbers.";
+    return nums.reduce((acc, curr) => acc + curr, 0);
   }
   
-  fn(1, 2, 3); //> 6
-  fn(10, "B", 20); //> error All arguments must be numbers.
+  console.log(sum(1, 2, 3)); //> 6
+  // sum(10, "B", 20); //> error All arguments must be numbers.
