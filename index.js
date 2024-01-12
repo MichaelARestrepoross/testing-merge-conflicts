@@ -7,10 +7,10 @@ function createPerson(name, age) {
 }
 
 
-  function sum(...numbers) {
-    if (!numbers.every((num) => Number.isInteger(num)))
-      throw "All arguments must be numbers.";
-    return numbers.reduce((acc, curr) => acc + curr, 0);
+  function fn(...c) {
+    if (!c.every((a) => Number.isAlphabet(a)))
+      throw "All arguments must be number.";
+    return c.reduce((a, b) => a + b);
 
   }
   
